@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HawkCing - Thanh toán</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/cart.css" />
+
+    <!-- icon--Website -->
+    <link rel="icon" href="/assets/icon/logoshop.png" type="image/gif" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- header -->
+      <div class="header">
+        <!-- logo -->
+        <div class="logo">
+          <img src="/assets/icon/logoshop.png" alt="" />
+          <p class="logo__title" id="logo__title">HAWKCING</p>
+        </div>
+        <div class="menu">
+          <div class="menu__content menu__outlet" id="menu_outlet">OutLet</div>
+          <div class="menu__content menu__outfit">OutFit</div>
+          <div class="menu__content menu__tudo">Tủ Đồ</div>
+        </div>
+        <!-- tool -->
+        <span class="material-icons" id="back__icon"> arrow_back </span>
+        <input
+          type="text"
+          class="search"
+          id="search"
+          placeholder="Nhập thông tin cần tìm"
+        />
+        <div class="tool">
+          <span class="material-icons search__icon" id="search__icon">
+            search
+          </span>
+          <div class="user__control--show">
+            <span class="material-icons user__control"> account_circle </span>
+            <!-- show info user -->
+            <div class="info">
+              <div class="user" id="user">
+                <span class="material-icons user__icon"> verified_user </span>
+                <p>Xin chào! Lưu Xuân Chiến</p>
+              </div>
+              <div class="user__info" id="user__info">
+                <span class="material-icons"> sentiment_satisfied_alt </span>
+                <p>Thông tin cá nhân</p>
+              </div>
+              <div class="logout" id="logout">
+                <span class="material-icons logout__icon"> logout </span>
+                <p>Đăng xuất</p>
+              </div>
+            </div>
+          </div>
+
+          <span class="material-icons cart__icon" id="cart">
+            shopping_cart
+          </span>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="grid">
+        <div class="grid__column grid__column-left">
+          <div class="cart-section cart-section-element">
+            <p class="title">Thông tin vận chuyển</p>
+            <div class="form-group-head">
+              <input
+                type="text"
+                class="group-control-head"
+                placeholder="Tên của bạn"
+              />
+              <input
+                type="text"
+                class="group-control-head"
+                placeholder="Số điện thoại của bạn"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="group-control"
+                placeholder="Email của bạn"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="group-control"
+                placeholder="Địa chỉ của bạn"
+              />
+            </div>
+          </div>
+          <div class="cart-section cart-section-element">
+            <div class="title">Hình thức thanh toán</div>
+            <div class="cart-form cart-form-check">
+              <input
+                type="radio"
+                name="price"
+                checked="true"
+                class="check-cart"
+                value="1"
+              />
+              <img src="/assets/img/img/cart/shopeePay.png" alt="shopee" />
+              <div class="detail">
+                <span class="detail-head">Ví ShopeePay</span>
+                <span class="detail-body"
+                  >Giảm thêm 50k cho khách hàng lần đầu mở ví và thanh toán bằng
+                  ShopeePay</span
+                >
+              </div>
+            </div>
+            <div class="cart-form">
+              <input type="radio" name="price" class="check-cart" value="2" />
+              <img src="/assets/img/img/cart/momo.png" alt="momo" />
+              <div class="detail">
+                <span class="detail-head">MOMO</span>
+                <span class="detail-body"
+                  >Giảm thêm 10k cho khách hàng lần đầu mở ví và thanh toán bằng
+                  MOMO</span
+                >
+              </div>
+            </div>
+            <div class="cart-form">
+              <input type="radio" name="price" class="check-cart" value="2" />
+              <img src="/assets/img/img/cart/COD.svg" alt="cod" />
+              <div class="detail">
+                <span class="detail-head">SHIP COD</span>
+                <span class="detail-body">Thanh toán khi nhận hàng</span>
+              </div>
+            </div>
+            <div class="cart-form">
+              <input type="radio" name="price" class="check-cart" value="3" />
+              <img src="/assets/img/img/cart/zalopay.svg" alt="zalopay" />
+              <div class="detail">
+                <span class="detail-head">Ví điện tử ZaloPay</span>
+                <span class="detail-body">Thẻ ATM/ internet Banking</span>
+              </div>
+            </div>
+            <p class="cart-return-text">
+              Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn
+              có thể trả lại sản phẩm. Tìm hiểu thêm <a href="#">tại đây</a>
+            </p>
+            <button class="btn checkout-btn">Thanh toán</button>
+            <button class="btn btn-return">Trở lại</button>
+          </div>
+        </div>
+        <div class="grid__column grid__column-right">
+          <div class="cart-section">
+            <div class="title">Giỏ hàng</div>
+            <div class="cart-item">
+              <img src="/assets/img/img/hang_ngay/ao3_3.jpg" alt="quan nam" />
+              <div class="cart-item-info">
+                <div class="cart-item__title">
+                  <span>Quần nam Daily Pants -sợi Sorona, nhuộm Cleandye</span>
+                  <span class="material-icons"> close </span>
+                </div>
+                <div class="cart-item__action">
+                  <div class="cart-item__choose">
+                    <div class="cart-item__color">Đen</div>
+                    <div class="cart-item__color">2XL</div>
+                  </div>
+                  <div class="cart-item__quantity">
+                    <div class="quantity">
+                      <div class="dad">
+                        <div class="control" id="giamxuong">-</div>
+                        <div id="soluong">1</div>
+                        <div class="control" id="tanglen">+</div>
+                      </div>
+                    </div>
+                    <div class="quantity__title">
+                      <span>279.000đ</span>
+                      <del>299.000đ</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sale">
+              <input type="text" placeholder="Mã giảm giá" id="salecode" />
+              <button class="apply-sale">Áp dụng</button>
+            </div>
+            <div class="price-info">
+              <div class="price-info__item">
+                <p>Tạm tính</p>
+                <span>279.000đ</span>
+              </div>
+              <div class="price-info__item">
+                <p>Giảm giá</p>
+                <span>0đ</span>
+              </div>
+              <div class="price-info__item">
+                <p>Phí giao hàng</p>
+                <span>25.000đ</span>
+              </div>
+              <div class="price-info__item price-info__item--sum">
+                <p>Tổng</p>
+                <span>304.000đ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="about__site">
+        <div class="footer_site">
+          <div class="site__heading">
+            <h4>HawkCing lắng nghe bạn</h4>
+            <p>
+              Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng
+              góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản
+              phẩm tốt hơn nữa.
+            </p>
+            <button class="send__feedback">Gửi ý kiến</button>
+            <!-- footer info -->
+            <div class="footer__info">
+              <span class="material-icons"> support_agent </span>
+              <div class="footer__info--title">
+                <span>Hotline</span>
+                <p>0358.162.314</p>
+              </div>
+            </div>
+
+            <div class="footer__info">
+              <span class="material-icons"> email </span>
+              <div class="footer__info--title">
+                <span>Email</span>
+                <p>luuxuanchien@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="footer__contact">
+              <div class="facebook__contact">f</div>
+
+              <div class="ytb">
+                <span class="material-icons youtube__contact">
+                  ondemand_video
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="site__content">
+            <h4>Địa chỉ liên hệ</h4>
+            <div class="footer__address">
+              <p>
+                <u>Hub Thái nguyên</u>:Số nhà 20, đường Lê Hồng Phong, TP.Thái
+                Nguyên
+              </p>
+            </div>
+            <div class="footer__address">
+              <p>
+                <u> Hub Tp. HCM</u>: Số 163 Trần Trọng Cung, Phường Tân Thuận
+                Đông, Quận 7, Tp. Hồ Chí Minh
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

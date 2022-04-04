@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hawk Cing Shop - Đăng nhập hoặc đăng ký</title>
+
+    <!-- icon webpage -->
+    <link rel="icon" href="/assets/icon/logoshop.png" type="image/gif" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- js -->
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="app">
+          <!-- title -->
+          <div class="title">
+            <img src="/assets/icon/logoshop.png" alt=""">
+            <h1 class="title__name">HawkCingShop</h1>
+            <h2 class="title__subname">
+              HawkCingShop giúp bạn kết nối và mua sắm trực tuyến dễ dàng
+            </h2>
+          </div>
+          <!-- form Login -->
+          <div class="main__login">
+            <div class="login">
+              <div class="login__group">
+                <form action="" name="formLogin" method="post">
+                  <div class="login__input">
+                    <input
+                      type="text"
+                      class="email"
+                      id="email"
+                      required
+                      placeholder="Email hoặc số điện thoại"
+                    />
+                    <input
+                      type="password"
+                      class="pass"
+                      id="pass"
+                      required
+                      placeholder="Mật khẩu"
+                    />
+                  </div>
+                  <div class="btn">
+                    <a href="/index.html" class="btn__login" id="btn__login">
+                      Đăng nhập
+                    </a>
+                  </div>
+                </form>
+                <div class="forgetpass">
+                  <a href="#">Quên mật khẩu?</a>
+                </div>
+              </div>
+              <div class="btn">
+                <button class="btn__reg" id="btn__reg">
+                  Tạo tài khoản mới
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- overlay + modal -->
+    <div class="overlay" id="overlay">
+      <!-- rong~ -->
+    </div>
+    <div id="modal" class="modal">
+      <div class="reg">
+        <div class="reg__title">
+          <div class="title__reg">
+            <h1>Đăng ký</h1>
+            <span class="material-icons" id="close"> close </span>
+          </div>
+          <h3>Nhanh chóng và dễ dàng</h3>
+        </div>
+        <div class="reg__group">
+          <div class="form">
+            <form action="">
+              <div class="group__fullname">
+                <input
+                  type="text"
+                  class="reg__name first__name"
+                  required
+                  placeholder="Họ"
+                />
+                <input
+                  type="text"
+                  class="reg__name first__name"
+                  required
+                  placeholder="Tên"
+                />
+              </div>
+              <input
+                type="text"
+                class="reg__name"
+                required
+                placeholder="Số điện thoại hoặc email"
+              />
+              <input
+                type="text"
+                class="reg__name"
+                required
+                placeholder="Mật khẩu mới"
+              />
+
+              <div class="sinhnhat">
+                Sinh nhật
+
+                <span class="material-icons"> help </span>
+              </div>
+              <div class="select">
+                <select name="date" id="" class="date" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <select name="month" id="" class="month" required>
+                  <option value="1">Tháng 1</option>
+                  <option value="2">Tháng 2</option>
+                  <option value="3">Tháng 3</option>
+                  <option value="4">Tháng 4</option>
+                  <option value="5">Tháng 5</option>
+                  <option value="1">Tháng 6</option>
+                  <option value="2">Tháng 7</option>
+                  <option value="3">Tháng 8</option>
+                  <option value="4">Tháng 9</option>
+                  <option value="5">Tháng 10</option>
+                  <option value="4">Tháng 11</option>
+                  <option value="5">Tháng 12</option>
+                </select>
+
+                <select name="year" id="" class="year" required>
+                  <option value="">2000</option>
+                  <option value="">2001</option>
+                  <option value="">2002</option>
+                  <option value="">2003</option>
+                  <option value="">2004</option>
+                  <option value="">2004</option>
+                </select>
+              </div>
+              <div class="gender__label">
+                Giới tính
+                <span class="material-icons"> help </span>
+              </div>
+              <div class="gender__group">
+                <div class="gender">
+                  <label for="male">Nam</label>
+                  <input type="radio" name="gender" id="male" />
+                </div>
+                <div class="gender">
+                  <label for="female">Nữ</label>
+                  <input type="radio" name="gender" id="female" />
+                </div>
+              </div>
+              <p class="law">
+                Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                <a href="#"> Điều khoản</a>,
+                <a href="#">Chính sách dữ liệu và Chính sách cookie</a> của
+                chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS
+                và hủy nhận bất kỳ lúc nào.
+              </p>
+              <div class="btn">
+                <!-- <input type="submit" class="reg" value="Đăng ký"> -->
+                <button class="reg">Đăng ký</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

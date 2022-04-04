@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HawkCing - Thông tin cá nhân</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/userinfo.css" />
+
+    <!-- icon--Website -->
+    <link rel="icon" href="/assets/icon/logoshop.png" type="image/gif" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- header -->
+      <div class="header">
+        <!-- logo -->
+        <div class="logo">
+          <img src="/assets/icon/logoshop.png" alt="" />
+          <p class="logo__title" id="logo__title">HAWKCING</p>
+        </div>
+        <div class="menu">
+          <div class="menu__content menu__outlet" id="menu_outlet">OutLet</div>
+          <div class="menu__content menu__outfit">OutFit</div>
+          <div class="menu__content menu__tudo">Tủ Đồ</div>
+        </div>
+        <!-- tool -->
+        <span class="material-icons" id="back__icon"> arrow_back </span>
+        <input
+          type="text"
+          class="search"
+          id="search"
+          placeholder="Nhập thông tin cần tìm"
+        />
+        <div class="tool">
+          <span class="material-icons search__icon" id="search__icon">
+            search
+          </span>
+          <div class="user__control--show">
+            <span class="material-icons user__control"> account_circle </span>
+            <!-- show info user -->
+            <div class="info">
+              <div class="user" id="user">
+                <span class="material-icons user__icon"> verified_user </span>
+                <p>Xin chào! Lưu Xuân Chiến</p>
+              </div>
+              <div class="user__info" id="user__info">
+                <span class="material-icons"> sentiment_satisfied_alt </span>
+                <p>Thông tin cá nhân</p>
+              </div>
+              <div class="logout" id="logout">
+                <span class="material-icons logout__icon"> logout </span>
+                <p>Đăng xuất</p>
+              </div>
+            </div>
+          </div>
+
+          <span class="material-icons cart__icon" id="cart">
+            shopping_cart
+          </span>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="grid">
+        <div class="grid__column">
+          <div class="account-sidebar">
+            <div class="title">Xin chào! Luu Xuan Chien</div>
+          </div>
+          <div class="account-sidebar-items">
+            <a href="#" class="account-sidebar-item user-info"
+              >Thông tin cá nhân</a
+            >
+            <a href="#" class="account-sidebar-item">Danh sách đơn hàng</a>
+            <a href="#" class="account-sidebar-item">Túi đồ định kỳ</a>
+            <a href="#" class="account-sidebar-item">Gửi ý kiến cho cửa hàng</a>
+            <a href="/home.html" class="account-sidebar-item">Thoát</a>
+          </div>
+        </div>
+        <div class="grid__column column-right">
+          <div class="info_tab">
+            <div class="title">Thông tin tài khoản</div>
+            <div class="grid__child">
+              <div class="grid__child--label">Họ tên</div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="fullname"
+                  placeholder="Họ tên của bạn"
+                />
+              </div>
+            </div>
+            <div class="grid__child">
+              <div class="grid__child--label">Email</div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email của bạn"
+                />
+              </div>
+            </div>
+            <div class="grid__child">
+              <div class="grid__child--label">Số điện thoại</div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="sdt"
+                  placeholder="Số điện thoại của bạn"
+                />
+              </div>
+            </div>
+            <div class="grid__child">
+              <div class="grid__child--label">Địa chỉ</div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="address"
+                  placeholder="Địa chỉ"
+                />
+              </div>
+            </div>
+            <div class="grid__child">
+              <div class="grid__child--label">Giới tính</div>
+              <div class="form-group">
+                <input type="radio" name="gender" class="" value="Male" />
+                <label for="gender" class="radio-group">Nam</label>
+                <input type="radio" name="gender" class="" value="Female" />
+                <label for="gender" class="radio-group">Nữ</label>
+              </div>
+            </div>
+            <button class="btn btn_update" id="btn__update">
+              Cập nhật tài khoản
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="about__site">
+        <div class="footer_site">
+          <div class="site__heading">
+            <h4>HawkCing lắng nghe bạn</h4>
+            <p>
+              Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng
+              góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản
+              phẩm tốt hơn nữa.
+            </p>
+            <button class="send__feedback">Gửi ý kiến</button>
+            <!-- footer info -->
+            <div class="footer__info">
+              <span class="material-icons"> support_agent </span>
+              <div class="footer__info--title">
+                <span>Hotline</span>
+                <p>0358.162.314</p>
+              </div>
+            </div>
+
+            <div class="footer__info">
+              <span class="material-icons"> email </span>
+              <div class="footer__info--title">
+                <span>Email</span>
+                <p>luuxuanchien@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="footer__contact">
+              <div class="facebook__contact">f</div>
+
+              <div class="ytb">
+                <span class="material-icons youtube__contact">
+                  ondemand_video
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="site__content">
+            <h4>Địa chỉ liên hệ</h4>
+            <div class="footer__address">
+              <p>
+                <u>Hub Thái nguyên</u>:Số nhà 20, đường Lê Hồng Phong, TP.Thái
+                Nguyên
+              </p>
+            </div>
+            <div class="footer__address">
+              <p>
+                <u> Hub Tp. HCM</u>: Số 163 Trần Trọng Cung, Phường Tân Thuận
+                Đông, Quận 7, Tp. Hồ Chí Minh
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/userinfo.js"></script>
+  </body>
+</html>
