@@ -33,17 +33,12 @@ html {
   justify-content: center;
   align-items: center;
 }
-.menu__content {
+.sub_menu{
+  text-decoration: none;
+  font-size: 22px;
   padding: 0 10px;
-  font-size: 18px;
-}
-.menu__outlet {
-  color: rgb(247, 4, 4);
-}
-.menu__outlet:hover,
-.menu__outfit:hover,
-.menu__tudo:hover {
-  cursor: pointer;
+  color: #000;
+  font-weight: 700;
 }
 .info {
   position: absolute;

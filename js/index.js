@@ -74,7 +74,7 @@ var app = {
         // btn tim hieu them
         var btnContact = document.getElementById("btn__aboutme");
         function contact(){
-            window.location.href = 'https://www.facebook.com/xinchaobannho';
+            alert('Liên hệ 035.030.xxx để được hỗ trợ!\n Xin cảm ơn');
         }
         btnContact.addEventListener('click',contact);
         
@@ -109,6 +109,11 @@ var app = {
                 line.style.width = tab.offsetWidth + 'px'
             }
         })
+
+        // scroll head
+        let headcroll = $('.header')
+        console.log(headcroll)
+        
     },
     start: function(){
         this.handleHome()
