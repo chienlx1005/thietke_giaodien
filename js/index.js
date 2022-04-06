@@ -5,6 +5,8 @@ var logo__title = document.getElementById("logo__title");
 var user = document.getElementById("user");
 var logout =document.getElementById("logout");
 var userinfo = document.getElementById("user__info");
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 
 
 var app = {
@@ -87,6 +89,26 @@ var app = {
             }
         }
         redirectContainer()
+
+        // control mac hang ngay
+        let line = $('.dash')
+        let panes = $$('.home__tab')
+        let tabs = $$('.item__tab')
+
+        tabs.forEach( (tab,index) => {
+            const pane = panes[index]
+
+            tab.onclick = function(){
+                $('.item__tab.item_active').classList.remove('item_active')
+                $('.home__tab.home__tab_active').classList.remove('home__tab_active')
+
+                this.classList.add('item_active')
+                pane.classList.add('home__tab_active')
+
+                line.style.left = tab.offsetLeft + 'px'
+                line.style.width = tab.offsetWidth + 'px'
+            }
+        })
     },
     start: function(){
         this.handleHome()

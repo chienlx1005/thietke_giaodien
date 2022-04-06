@@ -241,50 +241,54 @@ html {
 }
 
 .tab__header {
-  width: 250px;
+  width: 230px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 15px;
+  margin: 0 auto; 
   font-size: 14px;
+
+  
 }
-.tab__item {
-  opacity: 0.3;
+.item_que{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.5s ease;
+  padding: 0 0 10px 0;
+
 }
-.tab__item:hover {
+.item__tab {
+  opacity: 0.5;
+}
+.item__tab:hover{
   cursor: pointer;
-  opacity: 0.3;
+  color: #b92f52;
 }
+
+.item_active{
+  opacity: 1;
+}
+
 
 .dash {
-  background-color: rgb(3, 3, 3);
-  width: 100%;
+  background-color: rgb(207, 73, 73);
+  width: 100px;
   height: 2px;
-  margin-top: 10px;
-  opacity: 0.3;
-}
-.dash--on {
-  animation: dashOn ease 0.5s;
-  opacity: 1;
-}
-.dash--off {
-  animation: dashOff ease 0.5s;
-  opacity: 0.3;
-}
-.tab__item--on {
-  opacity: 1;
-}
-.tab__item--off {
-  opacity: 0.3;
-}
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease;
 
+}
 /* hometab */
 .home__tab {
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   justify-content: space-around;
+
+}
+.home__tab_active{
+  display: flex;
 }
 .item {
   width: 320px;
@@ -301,7 +305,11 @@ html {
 .item__pic {
   position: relative;
 }
-
+.item__pic > img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+}
 .item__size {
   position: absolute;
   display: flex;
