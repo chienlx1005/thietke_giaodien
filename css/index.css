@@ -8,6 +8,11 @@ html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
+/* body{
+  background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A );
+  background-size: 100%;
+  background-repeat: no-repeat;
+} */
 
 /* main + header */
 .main {
@@ -201,6 +206,7 @@ html {
   width: 100%;
   height: 736px;
   object-fit: cover;
+  border-radius: 10px;
 }
 .mySlide {
   position: relative;
@@ -285,6 +291,7 @@ html {
   display: none;
   flex-flow: row wrap;
   justify-content: space-around;
+  
 
 }
 .home__tab_active{
@@ -377,7 +384,58 @@ html {
 .item__title:hover {
   cursor: pointer;
 }
+/* outfit */
+.outfit_parent{
+  border-radius: 40px;
+  margin: 5px 0;
+}
+.outfit_title{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #b22d29;
+  padding: 10px;
+}
+.outfit_content{
+  display: flex;
+  justify-content: space-between;
+  background-color: #96d6ff;
+  border-radius: 40px;
+  color: #000;
+  border-bottom: 1px dashed #fff;
 
+}
+.outfit_content_reverse{
+  flex-direction: row-reverse;
+}
+.outfit_content .description {
+  text-decoration: none;
+  padding: 40px 60px;
+}
+.description >span { 
+  font-size: 24px;
+  font-weight: 700;
+}
+.description > ul{
+  padding: 10px 40px ;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style: disc;
+}
+.description a{
+  text-decoration: none;
+}
+.outfit_content > a{
+  width: 480px;
+  height: 600px;
+}
+.outfit_content  img {
+  width: 480px;
+  height: 600px;
+  object-fit: fill;
+  border: 1px solid #fff;
+  border-radius: 40px;
+}
 .content__info {
   width: 100%;
   height: 555px;
@@ -432,7 +490,7 @@ html {
   height: 500px;
   color: #fff;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   position: relative;
 }

@@ -8,9 +8,39 @@ var userinfo = document.getElementById("user__info");
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
+var outfitParent = $('.outfit_parent')
 
 var app = {
+    outfits: [
+        {
+            description: 'Chân ngắn đi biển mặc gì? Chọn ngay quần short jean',
+            dess: 'Kết hợp với bikini: những chiếc quần short jean mix cùng áo bikini hay bikini liền đều mang đến cho nàng một vẻ đẹp năng động nhưng vẫn vô cùng gợi cảm. Đặc biệt với những cô nàng chân ngắn, short jean như vị “cứu tinh” hack chân cực dài.',
+            image: '/assets/img/outfit/outfit1.jpg'
+        },
+        {
+            description:'Đi biển mặc váy gì?',
+            dess: 'Váy trễ vai: với những cô nàng mi nhon thì váy trễ vai sẽ làm toát lên mọi ưu điểm trên cơ thể. Tuy nhiên, mẫu váy này nếu biết cách chọn kiểu dáng thì vẫn hoàn toàn phù hợp với nàng nào hơi mũm mĩm, có vai thô đó nhé. Chỉ cần chọn những màu sắc hoặc hoạ tiết phù hợp với da đảm bảo bạn sẽ thật lung linh trên bãi biển nắng vàng.',
+            image: '/assets/img/outfit/outfit2.jpg'
+        },
+        {
+            description:'Đi biển mặc gì cho chất? Cách phối đồ đi biển với bikini',
+            dess: 'Bikini + áo ren lưới: áo ren lưới thoáng mát và gợi cảm, mix cùng bikini khiến cho bạn quyến rũ và nổi bật hơn. Sự kết hợp này từng là hot trend một thời và đến bây giờ chúng vẫn luôn được ưa chuộng.',
+            image: '/assets/img/outfit/outfit3.jpg'
+        },
+        {
+            description:'Đi biển mặc gì? Váy midi dáng xòe',
+            dess: 'Thêm một gợi ý cho các bạn có thân hình mũm mĩm đó là váy midi dáng xòe. Những chiếc váy midi không chỉ “hack” dáng mà còn che những khuyết điểm phần mông và chân rất tốt. Nhưng bạn đừng quên chọn một chiếc váy trơn từ trên xuống dưới, tạo cảm giác thân hình dài và gọn. Đặc biệt, bạn không nên chọn váy midi họa tiết hay thiết kế quá cầu kỳ.',
+            image: '/assets/img/outfit/outfit4.jpg'
+        },
+        {
+            description:'Áo phông và chân váy xếp ly',
+            dess: 'Áo phông mix với chân váy xếp ly không hề đơn điệu nếu nàng biết chọn chất liệu để mặc đi biển nhé. Một chiếc áo phông mềm mại cùng chân váy xếp ly dài chất voan sẽ là một set đồ hoàn hảo.',
+            image: '/assets/img/outfit/outfit5.jpg'
+        }
+    ]
+    ,
     handleHome: function(){
+        
         // show checksearchbox
         function showSearchBox (){
             alert("chưa có backend! Không thể tìm ")
@@ -115,8 +145,34 @@ var app = {
         console.log(headcroll)
         
     },
+    renderOutfit: function(){
+        const check = function(x){
+            if(x%2 === 0){
+                return true
+            }
+            return false
+        }
+        const htmls = this.outfits.map( (outfit,index) => {
+            return `<div class="outfit_content ${check(index)? '':'outfit_content_reverse'}">
+            <div class="description">
+              <span>${outfit.description}</span>
+              <ul>
+                <li>    
+                ${outfit.dess}
+                <a href="/Product.html">Xem thêm...</a>
+                </li>
+              </ul>
+              
+            </div>
+            <a href="/Product.html"><img src="${outfit.image}" alt="outfitmuahe" /></a>
+            
+          </div>`
+        })
+        outfitParent.innerHTML = htmls.join("");
+    },
     start: function(){
         this.handleHome()
+        this.renderOutfit()
     }
     
 }
