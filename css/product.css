@@ -11,7 +11,7 @@ html {
 /* header */
 /* main + header */
 .main {
-  max-width: 1350px;
+  max-width: 1360px;
   margin: 0 auto;
   position: relative;
 }
@@ -24,9 +24,10 @@ html {
   left: 0;
   height: 60px;
   z-index: 1;
-  width: 100%;
   justify-content: space-between;
   padding: 0 20px;
+  margin: 0 auto;
+  background-color: #96d6ff;
 }
 .menu {
   display: flex;
@@ -176,6 +177,8 @@ html {
 }
 
 .search {
+  outline: none;
+
   position: absolute;
   right: 145px;
   top: 13px;
@@ -329,6 +332,7 @@ html {
 }
 .active_color {
   opacity: 1;
+  border: 1px dashed #96d6ff;
 }
 .option__heading {
   display: flex;

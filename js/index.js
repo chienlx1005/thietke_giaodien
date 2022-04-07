@@ -7,8 +7,18 @@ var logout =document.getElementById("logout");
 var userinfo = document.getElementById("user__info");
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
+var slide = document.getElementsByClassName("mySlide")
+var dot = document.getElementsByClassName("dot__slide");
+var itemshirt = document.getElementsByClassName("item__shirt");
+
+
+var slider = $('.slider')
+var header = $('.header')
+
 
 var outfitParent = $('.outfit_parent')
+const outlet1 = $('#outlet1')
+const outlet2 = $('#outlet2')
 
 var app = {
     outfits: [
@@ -26,17 +36,236 @@ var app = {
             description:'Đi biển mặc gì cho chất? Cách phối đồ đi biển với bikini',
             dess: 'Bikini + áo ren lưới: áo ren lưới thoáng mát và gợi cảm, mix cùng bikini khiến cho bạn quyến rũ và nổi bật hơn. Sự kết hợp này từng là hot trend một thời và đến bây giờ chúng vẫn luôn được ưa chuộng.',
             image: '/assets/img/outfit/outfit3.jpg'
-        },
-        {
-            description:'Đi biển mặc gì? Váy midi dáng xòe',
-            dess: 'Thêm một gợi ý cho các bạn có thân hình mũm mĩm đó là váy midi dáng xòe. Những chiếc váy midi không chỉ “hack” dáng mà còn che những khuyết điểm phần mông và chân rất tốt. Nhưng bạn đừng quên chọn một chiếc váy trơn từ trên xuống dưới, tạo cảm giác thân hình dài và gọn. Đặc biệt, bạn không nên chọn váy midi họa tiết hay thiết kế quá cầu kỳ.',
-            image: '/assets/img/outfit/outfit4.jpg'
-        },
-        {
-            description:'Áo phông và chân váy xếp ly',
-            dess: 'Áo phông mix với chân váy xếp ly không hề đơn điệu nếu nàng biết chọn chất liệu để mặc đi biển nhé. Một chiếc áo phông mềm mại cùng chân váy xếp ly dài chất voan sẽ là một set đồ hoàn hảo.',
-            image: '/assets/img/outfit/outfit5.jpg'
         }
+    ]
+    ,
+    thoitrangs:[
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao1.jpeg',
+            pic_2: '/assets/img/img/hang_ngay/ao1_1.jpg',
+            title: 'Áo Pôt nam Cafe - Khử mùi hiệu quả',
+            price: 300000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao2_2.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao2.jpeg',
+            title: 'Quần Jeans Basic Slim V2',
+            price: 450000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao3.png',
+            pic_2: '/assets/img/img/hang_ngay/ao3_3.jpg',
+            title: 'Quần nam Daily Pants - sợi Sorona, nhuộm Cleandye',
+            price: 600000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao4.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao4.jpg',
+            title: 'Áo sơ mi nam dài tay Café-DriS khử mùi hiệu quả',
+            price: 500000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao5.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao5_5.jpg',
+            title: 'Hoodie thời trang China hàng hiệu',
+            price: 350000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao6.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao6_6.jpg',
+            title: 'Áo kẻ sọc đen trắng',
+            price: 200000,
+            sale: 25
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao7.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao7_7.jpg',
+            title: 'Váy nữ',
+            price: 700000,
+            sale: 30
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao8.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao8_8.jpg',
+            title: 'Váy ngắn thời trang',
+            price: 900000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao1.jpeg',
+            pic_2: '/assets/img/img/hang_ngay/ao1_1.jpg',
+            title: 'Áo Pôt nam Cafe - Khử mùi hiệu quả',
+            price: 300000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao2_2.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao2.jpeg',
+            title: 'Quần Jeans Basic Slim V2',
+            price: 450000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao3.png',
+            pic_2: '/assets/img/img/hang_ngay/ao3_3.jpg',
+            title: 'Quần nam Daily Pants - sợi Sorona, nhuộm Cleandye',
+            price: 600000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao4.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao4.jpg',
+            title: 'Áo sơ mi nam dài tay Café-DriS khử mùi hiệu quả',
+            price: 500000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao5.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao5_5.jpg',
+            title: 'Hoodie thời trang China hàng hiệu',
+            price: 350000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao6.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao6_6.jpg',
+            title: 'Áo kẻ sọc đen trắng',
+            price: 200000,
+            sale: 25
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/ao7.jpg',
+            pic_2: '/assets/img/img/hang_ngay/ao7_7.jpg',
+            title: 'Váy nữ',
+            price: 700000,
+            sale: 30
+        },
+        // {
+        //     pic_1: '/assets/img/img/hang_ngay/ao8.jpg',
+        //     pic_2: '/assets/img/img/hang_ngay/ao8_8.jpg',
+        //     title: 'Váy ngắn thời trang',
+        //     price: 900000,
+        //     sale: 0
+        // },
+    ]
+    ,
+    thoitrangsHoodie:[
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi1.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi1_1.jpg',
+            title: 'Áo Hoodie in hình sau lưng',
+            price: 800000,
+            sale: 15
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi2.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi2_2.jpg',
+            title: 'Áo Hoodie in hình sau lưng nhưng ngầu hơn',
+            price: 590000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi3.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi3_3.jpg',
+            title: 'Bộ Akasuki làng lá 2 màu đen trắng',
+            price: 680000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi4.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi4_4.jpg',
+            title: 'Áo Hokage đệ tứ tỏa sáng',
+            price: 999999,
+            sale: 0
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi5.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi5_5.jpg',
+            title: 'Thời trang đường phố China hàng hiệu',
+            price: 350000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi6.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi6_6.jpg',
+            title: 'Quần ngắn kết hợp siêu đẹp',
+            price: 400000,
+            sale: 5
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi7.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi7_7.jpeg',
+            title: 'Cổ trang & Hiện đại',
+            price: 700000,
+            sale: 8
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi8.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi8_8.jpg',
+            title: 'Thể thao lành mạnh mà sang chảnh',
+            price: 1200000,
+            sale: 10
+        },{
+            pic_1: '/assets/img/img/hang_ngay/hodi1.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi1_1.jpg',
+            title: 'Áo Hoodie in hình sau lưng',
+            price: 800000,
+            sale: 15
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi2.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi2_2.jpg',
+            title: 'Áo Hoodie in hình sau lưng nhưng ngầu hơn',
+            price: 590000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi3.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi3_3.jpg',
+            title: 'Bộ Akasuki làng lá 2 màu đen trắng',
+            price: 680000,
+            sale: 20
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi4.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi4_4.jpg',
+            title: 'Áo Hokage đệ tứ tỏa sáng',
+            price: 999999,
+            sale: 0
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi5.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi5_5.jpg',
+            title: 'Thời trang đường phố China hàng hiệu',
+            price: 350000,
+            sale: 10
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi6.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi6_6.jpg',
+            title: 'Quần ngắn kết hợp siêu đẹp',
+            price: 400000,
+            sale: 5
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi7.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi7_7.jpeg',
+            title: 'Cổ trang & Hiện đại',
+            price: 700000,
+            sale: 8
+        },
+        {
+            pic_1: '/assets/img/img/hang_ngay/hodi8.jpg',
+            pic_2: '/assets/img/img/hang_ngay/hodi8_8.jpg',
+            title: 'Thể thao lành mạnh mà sang chảnh',
+            price: 1200000,
+            sale: 10
+        },
     ]
     ,
     handleHome: function(){
@@ -63,9 +292,7 @@ var app = {
         autoSlide()
         function autoSlide (){
             var i;
-            var slide = document.getElementsByClassName("mySlide")
-            var dot = document.getElementsByClassName("dot__slide");
-            var itemshirt = document.getElementsByClassName("item__shirt");
+            
             for(i = 0 ; i < slide.length ; i++){
                 slide[i].style.display = 'none';
                 dot[i].classList.add("dots");
@@ -141,8 +368,49 @@ var app = {
         })
 
         // scroll head
-        let headcroll = $('.header')
-        console.log(headcroll)
+        
+        // console.log(headcroll)
+        // auto hide header if you scroll down, 
+        window.onscroll = function(){
+            scrollHeader();
+            imgShow()
+        }
+        let last_scroll =0
+        let scrollHeader = function(){
+            let scroll_top = window.scrollY
+
+            if(scroll_top < last_scroll){
+                header.classList.remove('scroll-down')
+                header.classList.add('scroll-up')
+                console.log(header)
+            }else{
+                header.classList.add('scroll-down')
+                header.classList.remove('scroll-up')
+            }
+            last_scroll = scroll_top
+        }
+        // show img if scroll down
+        let imgShow = function(){
+            let items = $$('.item')
+            let outfitShows = $$('.outfit_content')
+            items.forEach(item => {
+                if(window.pageYOffset > (item.offsetTop - 900)){
+                    item.classList.add('item_slideRight')
+                }else{
+                    item.classList.remove('item_slideRight')
+                }
+            });
+            outfitShows.forEach( outfitShow => {
+                if(window.pageYOffset > (outfitShow.offsetTop + 1500)){
+                    outfitShow.classList.add('outfit_slideShow')
+                }
+                else{
+                    outfitShow.classList.remove('outfit_slideShow')
+
+                }
+            })
+        }
+
         
     },
     renderOutfit: function(){
@@ -170,9 +438,100 @@ var app = {
         })
         outfitParent.innerHTML = htmls.join("");
     },
+    renderOutlet: function(){
+        const checkSale = function(x){
+            if(x> 0){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        const priceSale = function(price,sale){
+            return (price -(price*sale) / 100)
+        }
+        // do mac hang ngay
+        const htmls1 = this.thoitrangs.map((thoitrang,index) => {
+            return `<div class="item">
+            <div class="item__pic">
+              <a href="/Product.html">
+                <img
+                  src="${thoitrang.pic_1}"
+                  alt="áo nam"
+                  class="item__shirt"
+                />
+                <img
+                  src="${thoitrang.pic_2}"
+                  alt="ao thun nam"
+                  class="item__shirt1"
+                />
+              </a>
+
+              <div class="item__size">
+                <div class="item__sub">M</div>
+                <div class="item__sub">L</div>
+                <div class="item__sub">XL</div>
+                <div class="item__sub">2XL</div>
+              </div>
+              <div class="item__sale">${checkSale(thoitrang.sale)? 'Sale':'New'}</div>
+              
+              
+            </div>
+
+            <div class="item__title">${thoitrang.title}</div>
+            <div class="item__price">
+              <span>${priceSale(thoitrang.price,thoitrang.sale)}</span>
+              <del>${thoitrang.price}</del>
+              <span>${thoitrang.sale}%</span>
+            </div>
+          </div>
+            `           
+        })
+        outlet1.innerHTML = htmls1.join("")
+        // do thoi trang
+        const htmls2 = this.thoitrangsHoodie.map((thoitrang,index)=>{
+            return `<div class="item">
+            <div class="item__pic">
+              <a href="/Product.html">
+                <img
+                  src="${thoitrang.pic_1}"
+                  alt="áo nam"
+                  class="item__shirt"
+                />
+                <img
+                  src="${thoitrang.pic_2}"
+                  alt="ao thun nam"
+                  class="item__shirt1"
+                />
+              </a>
+
+              <div class="item__size">
+                <div class="item__sub">M</div>
+                <div class="item__sub">L</div>
+                <div class="item__sub">XL</div>
+                <div class="item__sub">2XL</div>
+              </div>
+              <div class="item__sale">${checkSale(thoitrang.sale)? 'Sale':'New'}</div>
+            
+              
+            </div>
+
+            <div class="item__title">${thoitrang.title}</div>
+            <div class="item__price">
+              <span>${priceSale(thoitrang.price,thoitrang.sale)}</span>
+              <del>${thoitrang.price}</del>
+              <span>${thoitrang.sale}%</span>
+            </div>
+          </div>
+        `   
+        })
+        outlet2.innerHTML = htmls2.join("");
+    }
+    ,
     start: function(){
         this.handleHome()
         this.renderOutfit()
+        this.renderOutlet()
     }
     
 }

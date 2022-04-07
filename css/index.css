@@ -16,23 +16,34 @@ html {
 
 /* main + header */
 .main {
-  max-width: 1350px;
+  max-width: 1360px;
   margin: 0 auto;
   position: relative;
+  overflow: auto;
 }
 
 .header {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   height: 60px;
   z-index: 1;
-  width: 1350px;
   justify-content: space-between;
   padding: 0 20px;
   margin: 0 auto;
+  width: 1360px;
+  
+}
+.scroll-down{
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+.scroll-up{
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  background-color: #96d6ff;
 }
 .header_fix{
   background-color: #edded5;
@@ -197,6 +208,7 @@ html {
   display: block;
   margin-right: 5px;
   border: 1px solid #d5c6c6;
+  outline: none;
 }
 /* slider */
 .slider {
@@ -234,7 +246,6 @@ html {
 
 /* content */
 .content {
-  padding: 0 16px;
   font-size: 14px;
   margin-top: 10px;
 }
@@ -290,7 +301,7 @@ html {
 .home__tab {
   display: none;
   flex-flow: row wrap;
-  justify-content: space-around;
+  /* justify-content: space-between; */
   
 
 }
@@ -300,7 +311,13 @@ html {
 .item {
   width: 320px;
   height: 520px;
-  margin: 50px 0;
+  margin:  10px;
+  visibility: hidden;
+}
+.item_slideRight{
+  visibility: visible;
+  animation: slideRight;
+  animation-duration: 1s;
 }
 
 .item img {
@@ -315,7 +332,7 @@ html {
 .item__pic > img {
   width: 320px;
   height: 420px;
-  object-fit: cover;
+  object-fit: fill;
 }
 .item__size {
   position: absolute;
@@ -385,6 +402,24 @@ html {
   cursor: pointer;
 }
 /* outfit */
+.outfit{
+  position: relative;
+  margin-bottom: 60px;
+
+}
+.outfit > a{
+  text-align: center;
+  border-radius: 30px;
+  width: 120px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #96d6ff;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: -50px;
+  left: calc((1350px - 120px)/2);
+
+}
 .outfit_parent{
   border-radius: 40px;
   margin: 5px 0;
@@ -396,6 +431,16 @@ html {
   color: #b22d29;
   padding: 10px;
 }
+.outfit_title::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: #96d6ff;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
 .outfit_content{
   display: flex;
   justify-content: space-between;
@@ -403,7 +448,14 @@ html {
   border-radius: 40px;
   color: #000;
   border-bottom: 1px dashed #fff;
-
+  margin-bottom: 20px;
+  visibility: hidden;
+}
+.outfit_slideShow{
+  visibility: visible;
+  animation: slideShowOutfit;
+  animation-duration: 2s;
+  
 }
 .outfit_content_reverse{
   flex-direction: row-reverse;
@@ -439,8 +491,8 @@ html {
 .content__info {
   width: 100%;
   height: 555px;
-  background-color: #f9f86c;
-  border-radius: 50px;
+  background-color: #96d6ff;
+  border-radius: 40px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -456,7 +508,7 @@ html {
 .about__pic > img {
   width: 100%;
   height: 555px;
-  border-radius: 50px;
+  border-radius: 40px;
 }
 .about__card--heading {
   font-size: 48px;
@@ -621,6 +673,28 @@ html {
     transform: translateY(-50px);
   }
   to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight{
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideShowOutfit{
+  from { 
+    opacity: 0;
+    transform: translateX(-100%);
+
+  }
+  to{
     opacity: 1;
     transform: translateX(0);
   }
