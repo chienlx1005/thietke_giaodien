@@ -245,7 +245,7 @@ body {
 /* slider */
 .slider {
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0px 0 20px 0;
 }
 
 .mySlide>img {

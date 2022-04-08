@@ -393,21 +393,22 @@ html {
   height: 40px;
 }
 .add__to__cart {
-  background-color: #000;
-  color: #fff;
+  background-color: #96d6ff;
+  color: #000;
   border-radius: 20px;
   width: 250px;
   height: 40px;
   display: flex;
   padding: 10px 30px;
   align-items: center;
-}
+border: none;}
 .add__to__cart > p {
   padding-left: 10px;
 }
 .add__to__cart:hover {
-  color: #000;
-  background-color: rgb(138, 136, 136);
+  color: #fff;
+  opacity: 0.6;
+  background-color: #0797f1;
   cursor: pointer;
 }
 .descripsion {

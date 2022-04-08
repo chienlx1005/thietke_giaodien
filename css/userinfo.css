@@ -286,16 +286,16 @@ html {
 .btn {
   width: 250px;
   height: 40px;
-  background-color: #2f5acf;
-  color: #fff;
+  background-color: #96d6ff;
+  color: #000;
   font-weight: bold;
   border-radius: 15px;
   margin: 20px 15px;
+  border: none;
 }
 .btn:hover {
   cursor: pointer;
-  background-color: #000;
-}
+opacity: 0.6;}
 /* footer */
 .about__site {
   background-color: #000;
