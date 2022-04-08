@@ -482,22 +482,22 @@ body {
 /* outfit */
 .outfit {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
 }
-
-.outfit>a {
+.more{
+  width: 100%;
+  text-align: center;
+}
+.more>a {
   text-align: center;
   border-radius: 30px;
   width: 120px;
   text-decoration: none;
   color: #fff;
   background-color: #96d6ff;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: -50px;
-  left: calc((1350px - 120px)/2);
-
+  padding: 5px 10px;
+  margin: 0 auto;
 }
 
 .outfit_parent {
@@ -769,7 +769,7 @@ body {
 .footer_site {
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 @keyframes itemShow {
