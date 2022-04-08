@@ -436,7 +436,7 @@ body {
   display: none;
 }
 
-.item__pic:hover .item__sub {
+.item:hover .item__sub {
   display: block;
 }
 
