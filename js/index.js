@@ -377,22 +377,24 @@ var app = {
             if(window.pageYOffset === 0){
                 // header.style.backgroundColor = 'none';
                 // console.log(header.offsetTop)
-                header.classList.remove('scroll-back')
+                $('.navbar').classList.remove('scroll-back')
             }
             
         }
         let last_scroll =0
         let scrollHeader = function(){
             let scroll_top = window.scrollY
-
+            let head = $('.navbar')
             if(scroll_top < last_scroll){
-                header.classList.remove('scroll-down')
-                header.classList.add('scroll-up')
-                header.classList.add('scroll-back')
+                head.classList.remove('scroll-down')
+                head.classList.add('scroll-up')
+                head.classList.add('scroll-back')
+                
+                
                 // console.log(header)
             }else{
-                header.classList.add('scroll-down')
-                header.classList.remove('scroll-up')
+                head.classList.add('scroll-down')
+                head.classList.remove('scroll-up')
             }
             last_scroll = scroll_top
         }
@@ -403,18 +405,13 @@ var app = {
             items.forEach(item => {
                 if(window.pageYOffset > (item.offsetTop - 900)){
                     item.classList.add('item_slideRight')
-                }else{
-                    item.classList.remove('item_slideRight')
                 }
             });
             outfitShows.forEach( outfitShow => {
                 if(window.pageYOffset > (outfitShow.offsetTop + 1500)){
                     outfitShow.classList.add('outfit_slideShow')
                 }
-                else{
-                    outfitShow.classList.remove('outfit_slideShow')
-
-                }
+               
             })
         }
 
