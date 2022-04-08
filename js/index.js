@@ -374,6 +374,12 @@ var app = {
         window.onscroll = function(){
             scrollHeader();
             imgShow()
+            if(window.pageYOffset === 0){
+                // header.style.backgroundColor = 'none';
+                // console.log(header.offsetTop)
+                header.classList.remove('scroll-back')
+            }
+            
         }
         let last_scroll =0
         let scrollHeader = function(){
@@ -382,7 +388,8 @@ var app = {
             if(scroll_top < last_scroll){
                 header.classList.remove('scroll-down')
                 header.classList.add('scroll-up')
-                console.log(header)
+                header.classList.add('scroll-back')
+                // console.log(header)
             }else{
                 header.classList.add('scroll-down')
                 header.classList.remove('scroll-up')
