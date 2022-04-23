@@ -1,0 +1,34 @@
+@media only screen and (max-width: 1024px) {
+    .navbar,.header{
+        width: 1024px;
+    }
+
+    .grid{
+        width: 1024px;
+    }
+    .sale input{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar,.header{
+        width: 768px;
+        z-index: 22;
+    }
+    .search,.tool{
+        display: none;
+    }
+    .mobile_icon{
+        display: block;
+        padding: 15px;
+
+    }
+
+    .grid{
+        width: 768px;
+    }
+    .sale input{
+        width: 70%;
+    }
+}

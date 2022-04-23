@@ -22,7 +22,12 @@ html {
   z-index: 1;
   background-color: #96d6ff;
 }
+.mobile_icon
+{
+  display: none;
+  font-size: 18px;
 
+}
 .header {
   display: flex;
   position: fixed;

@@ -166,9 +166,10 @@ html{
     bottom: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 2px;
     display: none;
+    transition: all 0.3s ease;
 }
 .modal--on{
     display: flex;

@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1024px) {
+    .app{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .app{
+        margin: 0;
+        padding: 10px;
+    }
+}

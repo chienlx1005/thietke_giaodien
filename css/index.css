@@ -46,6 +46,11 @@ body {
   width: 1360px;
 
 }
+.mobile_icon{
+  font-size: 18px;
+  display: none;
+}
+
 .scroll-back{
   background-color: #96d6ff;
 

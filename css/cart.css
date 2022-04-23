@@ -16,6 +16,12 @@ html {
   overflow: auto;
   background-color: #fff;
 }
+.mobile_icon
+{
+  display: none;
+  font-size: 18px;
+
+}
 .navbar{
   width: 100%;
   height: 60px;

@@ -1,0 +1,96 @@
+@media only screen and (max-width: 1024px){
+    .navbar,.header{
+        width: 1024px;
+    }
+    .home__tab{
+        width: 800px;
+        justify-content: space-between;
+        margin:  0 auto;
+    }
+    .mySlide > img{
+        width: 100%;
+        height: 500px;
+    }
+    .outfit_parent{
+        width: 950px;
+        margin:  0 auto;
+
+    }
+    .content__info{
+        width: 950px;
+        margin:  0 auto;
+        height: 500px;
+    }
+    .about__card{
+        width: 45%;
+    }
+    .about__pic{
+        width: 45%;
+        height: 500px;
+    }
+    .about__pic > img {
+        height: 500px;
+    }
+    .about__card--heading{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar,.header{
+        width: 768px;
+    }
+    .search,.tool{
+        display: none;
+    }
+    .mobile_icon{display: block;
+        padding: 15px;
+    }
+    .home__tab{
+        width: 680px;
+        justify-content: space-between;
+        margin:  0 auto;
+    }
+    .outfit_parent{
+        width: 700px;
+        margin:  0 auto;
+
+    }
+    .content__info{
+        width: 700px;
+        margin:  0 auto;
+        height: 300px;
+    }
+    .about__card--heading,.about__card>p{
+        padding: 5px 5px 5px 10px;
+        font-size: 22px;
+    }
+    .outfit_content .description{
+        padding: 15px 5px 5px 15px;
+        
+    }
+    .outfit_content img{
+        width: 300px;
+        height: 400px;
+    }
+    .outfit_content {
+        height: 400px;
+    }
+    .description>span{
+        font-size: 16px;
+    }
+    .about__card{
+        width: 45%;
+    }
+    .about__pic{
+        width: 45%;
+        height: 300px;
+    }
+    .about__pic > img {
+        height: 300px;
+    }
+    .about__card .about__me{
+        margin: 10px;
+    }
+    
+}
